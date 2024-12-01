@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/" method="post">
+            <input type="text" name="plang" placeholder="Prog. Lang.">
+            <button type="submit">Add</button>
+        </form>
+
+        <ul>
+            <% if(pl.length) { %>
+                <% for(let x = 0; x < pl.length; x++) { %>
+                    <li><%= pl[x] %></li>
+                <% } %>
+            <% } else { %>
+                <p>No data found</p>
+            <% } %>
+            
+        </ul>
+    </main>
+    <footer>
+        <p>All rights reserved by &copy; Naeem Biswass Niloy</p>
+    </footer>
+</body>
+</html>
